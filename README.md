@@ -1,5 +1,5 @@
 <!--<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>-->
-<p align="center"><h3>Sistema PQRS</h3></p>
+<h2 align="center">Sistema PQRS</h2>
 
 <p align="center">
 <!-- <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -14,7 +14,16 @@ Un sistema PQRS permite facilmente que clientes o afilaidos a una empresa puedan
 Un Sistema de Peticiones, Quejas, Reclamos y Sugerencias (PQRS) es una herramienta que permite a una organización, conocer las inquietudes y manifestaciones que tienen sus clientes o afiliados. De esta forma se pueden realizar estrategias que permitan ofrecer un mejor servicio a los clientes.
 
 
-## Objetivos
-Crear una plataforma que permita la facil gestión de las solicitudes a una organización por parte de sus clientes.
 
-## License
+<!-- ## Instrucciones
+1. Clonar el proyecto.
+2. Crear Base de datos.
+3. Configurar en el archivo .env las bases de datos.
+4. Genenar "Aplication Key" 
+-->
+
+<!-- ## Objetivos
+1. Crear una plataforma que permita la facil gestión de las solicitudes PQRS a una organización por parte de sus clientes.
+
+
+## License -->
