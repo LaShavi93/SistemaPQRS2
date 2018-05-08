@@ -8,6 +8,7 @@
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
         "fzaninotto/faker": "^1.7",
+        "jeroennoten/laravel-adminlte": "^1.23",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0"
     },

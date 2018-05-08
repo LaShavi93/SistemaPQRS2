@@ -9,9 +9,10 @@
 </p> -->
 
 ## Acerca de Sistema PQRS
-Un sistema PQRS permite facilmente que clientes o afilaidos a una empresa puedan presentar preguntas, quejas, reclamos y sugerencias.
+Un sistema PQRS permite fácilmente que clientes o afiliados a una empresa puedan presentar preguntas, quejas, reclamos y sugerencias.
 
 Un Sistema de Peticiones, Quejas, Reclamos y Sugerencias (PQRS) es una herramienta que permite a una organización, conocer las inquietudes y manifestaciones que tienen sus clientes o afiliados. De esta forma se pueden realizar estrategias que permitan ofrecer un mejor servicio a los clientes.
+
 
 
 
