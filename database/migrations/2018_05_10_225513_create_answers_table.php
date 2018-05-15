@@ -17,13 +17,18 @@ class CreateAnswersTable extends Migration
             $table->increments('id');
             $table->integer('document_id')->unsigned();
             $table->integer('attached_document_id')->unsigned();
-            $table->integer('user_id')->unsigned();  
+            $table->integer('user_id')->unsigned(); 
+            
+            //--Foreign Key 
             $table->foreign('document_id')->references('id')->on('documents')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('attached_document_id')->references('id')->on('attached_documents')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')->onUpdate('cascade');            
-            //$table->date('response_date');
-            $table->string('subject', '250');
+            //--Foreign Key
+                        
             $table->text('answer');
+            
+            //--Campos por defecto.
+            $table->softDeletes();
             $table->timestamps();
         });
     }

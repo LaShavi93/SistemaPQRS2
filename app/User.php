@@ -15,7 +15,12 @@ class User extends Authenticatable
             ->belongsToMany('App\Role')
             ->withTimestamps();
     }
-    
+
+    public function document(){
+        return $this
+            ->belongsToMany('App\Document');
+    }
+
     public function authorizeRoles($roles)
     {
         if ($this->hasAnyRole($roles)) {

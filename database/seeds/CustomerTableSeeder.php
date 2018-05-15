@@ -18,7 +18,7 @@ class CustomerTableSeeder extends Seeder
         $faker = FKR::create();
         foreach (range(1,10) as $index) {
 	        DB::table('Customer')->insert([
-	            'identification_card' => $faker->personalIdentityNumber,
+	            'personal_identity_number' => $faker->personalIdentityNumber,
 	            'first_name' => $faker->firstNameMale,
                 'last_name' => $faker->lastName,
                 'phone' => $faker->phoneNumber, 

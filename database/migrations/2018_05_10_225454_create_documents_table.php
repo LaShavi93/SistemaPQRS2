@@ -17,13 +17,19 @@ class CreateDocumentsTable extends Migration
             $table->increments('id');
             $table->integer('customer_id')->unsigned();
             $table->integer('document_type_id')->unsigned();
-            $table->integer('attached_document_id')->unsigned();            
+            $table->integer('attached_document_id')->unsigned();    
+            $table->integer('affair_id')->unsigned();    
+            
+            //--Foreign Key            
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('document_type_id')->references('id')->on('document_types')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('attached_document_id')->references('id')->on('attached_documents')->onDelete('restrict')->onUpdate('cascade');            
-            //$table->date('date_filing');
-            $table->string('reason', '250');
+            $table->foreign('affair_id')->references('id')->on('affairs')->onDelete('restrict')->onUpdate('cascade');
+            //--Foreign Key
+                        
             $table->text('description');
+            
+            //--Campos por defecto.
             $table->softDeletes();
             $table->timestamps();
         });
@@ -39,3 +45,5 @@ class CreateDocumentsTable extends Migration
         Schema::dropIfExists('documents');
     }
 }
+//cahernandez@iegrupo.co
+//internacinal de elctricas.

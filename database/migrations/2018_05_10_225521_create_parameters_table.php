@@ -16,8 +16,10 @@ class CreateParametersTable extends Migration
         Schema::create('parameters', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', '100');
-            $table->text('description', '100');
+            $table->text('description');
             $table->integer('value');
+            
+            //--Campos por defecto.
             $table->softDeletes();
             $table->timestamps();
         });

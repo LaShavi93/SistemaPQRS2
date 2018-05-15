@@ -16,8 +16,16 @@ class CreateDocumentTypesTable extends Migration
         Schema::create('document_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', '100');
-            $table->text('description', '100');
+            $table->integer('affair_id')->unsigned();    
+            
+            //--Foreign Key
+            $table->foreign('affair_id')->references('id')->on('affairs')->onDelete('restrict')->onUpdate('cascade');
+            //--Foreign Key
+            
+            $table->text('description');
             $table->integer('response_time'); //Se representa en numero de días.            
+            
+            //--Campos por defecto.
             $table->softDeletes();
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAttachedDocumentsTable extends Migration
+class CreateAffairsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateAttachedDocumentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('attached_documents', function (Blueprint $table) {
+        Schema::create('affairs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('mime_type', '100');
             $table->string('name', '100');
-            $table->text('name_url');
+            $table->text('description');
             
             //--Campos por defecto.
             $table->softDeletes();
@@ -32,6 +31,6 @@ class CreateAttachedDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attached_documents');
+        Schema::dropIfExists('affairs');
     }
 }
