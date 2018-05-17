@@ -9,8 +9,7 @@ class RoleTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
+    public function run(){
         //Rol de Administrador: Todos los privilegios.
         $role = new \App\Role();
         $role->name = 'admin';

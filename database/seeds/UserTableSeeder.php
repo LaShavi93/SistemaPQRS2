@@ -13,9 +13,10 @@ class UserTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        $faker = FKR::create('App/Users');
+    public function run(){
+        
+        //$faker = FKR::create('App/Users');
+        $faker = Faker\Factory::create('es_PE'); // create a Peruan faker
 
         $role_admin = Role::where('name', 'admin')->first();
         $role_gerente = Role::where('name', 'gerente')->first();

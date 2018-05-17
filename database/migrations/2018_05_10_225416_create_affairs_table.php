@@ -15,6 +15,13 @@ class CreateAffairsTable extends Migration
     {
         Schema::create('affairs', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('document_type_id')->unsigned();    
+            
+            //--Foreign Key
+            $table->foreign('document_type_id')->references('id')->on('document_types')->onDelete('restrict')->onUpdate('cascade');
+            //--Foreign Key
+
             $table->string('name', '100');
             $table->text('description');
             

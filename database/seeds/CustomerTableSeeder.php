@@ -12,13 +12,15 @@ class CustomerTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
+    public function run(){
+        
+        $faker = Faker\Factory::create('es_PE'); // create a Peruan faker
         //$faker = FKR::create('App/Customer');
-        $faker = FKR::create();
+        //$faker = FKR::create();
         foreach (range(1,10) as $index) {
-	        DB::table('Customer')->insert([
-	            'personal_identity_number' => $faker->personalIdentityNumber,
+	        DB::table('customers')->insert([
+                'personal_identity_number' => $faker->dni,
+                //'personal_identity_number' => "1",
 	            'first_name' => $faker->firstNameMale,
                 'last_name' => $faker->lastName,
                 'phone' => $faker->phoneNumber, 
